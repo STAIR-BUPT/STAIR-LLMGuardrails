@@ -1,0 +1,25 @@
+# 系统架构
+django
+django-cors-headers
+djangorestframework
+favicon
+
+fastapi
+uvicorn
+
+celery
+
+mysqlclient
+redis
+
+guardrails-ai
+
+# 输出护栏
+torch
+
+# 内生护栏
+# fschat
+transformers
+peft
+sentencepiece
+fastchat
