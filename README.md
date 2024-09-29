@@ -258,8 +258,29 @@ curl -X POST \
 
 我们制定了用户手册，你可以在[这里](https://icnodknns82a.feishu.cn/wiki/Wyxdw0kZqid6GJkiwFfcR4pJnWc?from=from_copylink)看到具体细节。
 
+## 文件架构是什么?
+
+```bash
+├─Atuo_api_for_LLM
+├─Client
+├─Detector_API
+├─Inner_guard_API
+└─LLMGuardrail
+    ├─inner_guard
+    ├─input_guard
+    ├─LLMGuardrail
+    ├─output_guard
+    └─user_management
+```
+
+1. Atuo_api_for_LLM：此文件夹包含快速部署模型对话回答api，其中就包括用于输出护栏的大模型评估组件所需要的[MD-Judge-v0.1]模型。([OpenSafetyLab/MD-Judge-v0.1](https://huggingface.co/OpenSafetyLab/MD-Judge-v0.1))
+2. Client：此文件夹包含内生护栏客户端的对外API，它主要用于实现面向用户的api接口和与服务器的内生护栏通信。
+3. Detector_API：此文件夹包含护栏所采用各项评估组件需要的模型api，它主要用于降低调用时部署模型所需要的额外开销。
+4. Inner_guard_API：此文件夹包含内生护栏服务端所需要的第三方安全模型。如在本项目中，它主要用于实现safedecoding防御机制的安全token查询、模型封装、模型推理等功能。
+5. LLMGuardrail：此文件夹包含整个django框架的主要代码，其中包含了输入护栏、输出护栏、内生护栏、用户管理等模块。
+
 # Contributing
 
 我们欢迎为 大模型安全护栏 做出贡献！
 
-首先查看 Github 问题并查看贡献指南。请随意提出问题，或者如果您想添加到项目中，请联系我们！
+请随意提出问题，或者如果您想添加到项目中，请联系我们！
