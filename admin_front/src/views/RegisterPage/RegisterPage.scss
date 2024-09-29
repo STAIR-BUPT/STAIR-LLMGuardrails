@@ -1,0 +1,34 @@
+.admin_login {
+  width: 100vw;
+  height: 100vh;
+
+  &.theme_one {
+    //background-color: #f5f5f5;
+    background: linear-gradient(to right, #7ab6b6 0%, #7ab6b6 50%, #e5cfaa 50%,  #e5cfaa 100%);
+
+    .container_form {
+      position: absolute;
+      width: 50%;
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%, -20%);
+      max-width: 360px;
+      min-width: 320px;
+      background-color: #fff;
+      padding: 40px 48px;
+      box-shadow: 10px 10px rgba(85, 85, 85, 0.48);
+
+      .head-title {
+        font-size: 22px;
+        color: #555;
+        text-align: center;
+        font-weight: bold;
+        margin: 10px auto 30px;
+      }
+
+      .ant-form-item {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
